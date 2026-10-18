@@ -1,0 +1,13 @@
+手表洛雪音乐歌词支持
+Copyright 2026 miyin
+
+本作品是对 LyricProvider（https://github.com/tomakino/LyricProvider ，
+Copyright Proify, Tomakino）的修改版本，按 Apache License 2.0 分发。
+
+修改内容：
+- 模块包名改为 io.github.proify.lxmusic.watch
+- 应用名改为「手表洛雪音乐歌词支持」
+- 增加对 LX 手表版（cn.miyin.music.watch）的歌词提供支持
+
+原始作品及其版权归原作者所有，本修改版本的版权归修改者所有。
+本文件依据 Apache License 2.0 第 4 条 (d) 项的要求，用于说明修改内容。
