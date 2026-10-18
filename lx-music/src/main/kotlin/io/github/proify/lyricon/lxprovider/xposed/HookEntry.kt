@@ -17,8 +17,7 @@ import io.github.proify.lyricon.lxprovider.xposed.variant.main.LXMusic
 open class HookEntry : IYukiHookXposedInit {
 
     override fun onHook() = YukiHookAPI.encase {
-        loadApp("cn.toside.music.mobile", LXMusic())
-        // 手表版（包名与类名均已改为 cn.miyin.music.watch）
+        // LX 手表版（本模块的主要适配目标）
         loadApp("cn.miyin.music.watch", LXMusic("cn.miyin.music.watch.lyric.LyricModule"))
         loadApp("com.ikunshare.music.mobile", IKunMusic())
         loadApp("com.lxnetease.music.mobile", LxNetease())
