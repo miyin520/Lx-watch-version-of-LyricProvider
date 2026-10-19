@@ -22,8 +22,8 @@ configure<ApplicationExtension> {
         applicationId = "io.github.proify.lxmusic.watch"
         minSdk = 27
         targetSdk = rootProject.extra.get("targetSdkVersion") as Int
-        versionCode = 4
-        versionName = "1.0.2-watch"
+        versionCode = 5
+        versionName = "1.0.3-watch"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
