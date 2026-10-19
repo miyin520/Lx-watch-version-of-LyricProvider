@@ -39,6 +39,25 @@ LX 手表版项目地址：https://github.com/miyin520/lx-music
 
 其余模块与上游保持一致。
 
+## 签名
+
+模块使用固定签名密钥，证书 SHA-256 指纹：
+
+```
+64:0E:31:A4:CD:4D:20:FA:BD:1C:48:25:56:2C:83:69:26:C7:C6:43:5C:3A:1A:4B:6D:8A:58:63:70:FC:C2:39
+```
+
+密钥文件不随仓库分发，构建时通过环境变量提供：
+
+```bash
+export RELEASE_STORE_FILE=/path/to/lyricprovider.jks
+export RELEASE_STORE_PASSWORD=***
+export RELEASE_KEY_ALIAS=lyricprovider
+export RELEASE_KEY_PASSWORD=***
+```
+
+更换密钥会导致已安装的模块无法覆盖升级，必须卸载重装。
+
 ## 构建
 
 环境要求：JDK 17、Android SDK（compileSdk 37）、Gradle 9.3.1。
@@ -49,8 +68,7 @@ LX 手表版项目地址：https://github.com/miyin520/lx-music
 
 产物位于 `lx-music/build/outputs/apk/release/`。
 
-签名文件 `lx-music/release.jks` 未包含在仓库中，构建前需自行生成，并通过环境变量
-`RELEASE_STORE_PASSWORD`、`RELEASE_KEY_ALIAS`、`RELEASE_KEY_PASSWORD` 提供。
+签名密钥不随仓库分发，构建方式见上一节「签名」。
 
 ## 许可
 
